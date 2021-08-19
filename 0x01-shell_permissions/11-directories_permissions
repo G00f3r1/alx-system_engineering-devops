@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R -type d a+x
+find . -type f -print0 | xargs -0 chmod a+x
