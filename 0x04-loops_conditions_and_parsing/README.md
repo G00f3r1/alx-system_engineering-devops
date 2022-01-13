@@ -23,6 +23,6 @@ Not passing ```Shellcheck```:
 
 Passing ```Shellcheck```:
 
-![Passing Shellcheck](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/251/ubHWxDU.png"Passing")
+![Passing Shellcheck](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/251/ubHWxDU.png "Passing")
 
 For every feedback, Shellcheck will provide a code that you can use to get more information about the issue, for example for code ```SC2034```, you can browse [here](https://github.com/koalaman/shellcheck/wiki/SC2034).
