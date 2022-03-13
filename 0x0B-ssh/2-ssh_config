@@ -1,0 +1,4 @@
+
+Host 34.148.139.135
+PasswordAuthentication no
+IdentityFile ~/.ssh/school
