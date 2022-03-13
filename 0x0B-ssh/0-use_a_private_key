@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-ssh -i ~/.ssh/school ubuntu@34.148.139.135
+ssh -i ~/.ssh/RSA_key ubuntu@34.148.139.135
