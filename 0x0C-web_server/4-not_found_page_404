@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # install and setup nginx server
 sudo apt-get update
-sudo apt-get install nginx
+sudo apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.html
 sudo sed -i '/server_name _;/a rewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
