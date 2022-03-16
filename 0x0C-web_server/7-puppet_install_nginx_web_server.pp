@@ -7,6 +7,7 @@ package { 'nginx':
 
 file { '/var/www/html/index.html':
   content => 'Hello World',
+  after  => 'listen 80 default_server;',
   path    => '/var/www/html/index.html'
 }
 
