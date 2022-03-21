@@ -2,6 +2,5 @@
 # configures a brand new Ubuntu machine
 sudo apt-get update
 sudo apt-get -y nginx
-header="\t\tadd_header X-Served-By '$HOSTNAME';"
-sudo sed -i "31i\ $header" /etc/nginx/sites-enabled/default
+sudo sed -i "11i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
 sudo service nginx restart
