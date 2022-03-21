@@ -4,5 +4,15 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get -y install haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original2
-sudo sed -i "$ a\listen webapp 0.0.0.0:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 1404-web-01 34.148.139.135:80 check\n\tserver 1404-web-02 34.236.36.206:80 check" /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+echo "
+listen 1404-lb-01
+        bind 0:80
+        mode http
+        stats enable
+        balance roundrobin
+        option httpclose
+        option forwardfor
+        server 1404-web-01 34.148.139.135 check port 80
+        server 1404-web-02 34.236.36.206 check port 80
+" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
