@@ -1,3 +1,4 @@
+# configures a brand new Ubuntu machine to the requirements
 exec { 'apt-update':
   command  => 'sudo apt-get update',
   provider => shell,
