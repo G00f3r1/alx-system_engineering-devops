@@ -41,7 +41,7 @@ int main(void)
 		}
 		else
 		{
-			exit(0)
+			exit(0);
 		}
 	}
 	infinite_while();
